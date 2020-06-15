@@ -1,0 +1,54 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spider-server
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://34.80.225.217:3306/spider-man?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: passw0rd@y
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+
+#mybatis
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/**/*.xml
+#  typeAliasesPackage: com.mocc.*.entity
+#  global-config:
+#    db-config:
+#      id-type: auto
+#      field-strategy: not_empty
+#      table-underline: true
+#      db-type: mysql
+#    refresh: true
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+
+logging:
+  level:
+    org.springframework.web: info
+    org.apache.http: info
+    us.codecraft.webmagic: info
+
+
+
