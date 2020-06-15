@@ -11,12 +11,12 @@ import us.codecraft.webmagic.pipeline.Pipeline;
 
 @Component
 @Slf4j
-public class MysqlPipeline implements Pipeline {
+public class JobInfoPipeline implements Pipeline {
 
     private final JobInfoService jobInfoService;
 
     @Autowired
-    public MysqlPipeline(JobInfoService jobInfoService) {
+    public JobInfoPipeline(JobInfoService jobInfoService) {
         this.jobInfoService = jobInfoService;
     }
 

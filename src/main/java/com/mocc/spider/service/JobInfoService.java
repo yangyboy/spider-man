@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mocc.spider.mapper.JobInfoMapper;
 import com.mocc.spider.entity.JobInfo;
 import com.mocc.spider.webmagic.processor.JobProcessor;
-import com.mocc.spider.webmagic.pipeline.MysqlPipeline;
+import com.mocc.spider.webmagic.pipeline.JobInfoPipeline;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class JobInfoService extends ServiceImpl<JobInfoMapper, JobInfo> {
     String url = "https://search.51job.com/list/080200,000000,0000,26,9,99,%25E6%2588%25BF%25E4%25BA%25A7%25E7%25BB%258F%25E7%25BA%25AA%25E4%25BA%25BA,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=";
 
     @Autowired
-    private MysqlPipeline mysqlPipeline;
+    private JobInfoPipeline mysqlPipeline;
 
     @Autowired
     private JobProcessor jobProcessor;
