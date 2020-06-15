@@ -1,4 +1,4 @@
-package com.mocc.spider.webmagic;
+package com.mocc.spider.webmagic.downloader;
 
 import lombok.extern.slf4j.Slf4j;
 import us.codecraft.webmagic.Page;

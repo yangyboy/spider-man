@@ -3,6 +3,7 @@ package com.mocc.spider.webmagic.processor;
 import cn.hutool.core.convert.Convert;
 import com.mocc.spider.dto.NovelDTO;
 import com.mocc.spider.entity.Novel;
+import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Site;
@@ -13,6 +14,7 @@ import us.codecraft.webmagic.selector.Selectable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class YousuuProcessor implements PageProcessor {
 
     private Site site = Site.me().setRetryTimes(0).setSleepTime(2000).setTimeOut(60000);

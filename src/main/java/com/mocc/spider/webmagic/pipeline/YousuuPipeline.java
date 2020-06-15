@@ -6,6 +6,7 @@ import com.mocc.spider.service.NovelService;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;
@@ -15,6 +16,7 @@ import java.util.List;
 /**
  * 持久化小说数据
  */
+@Component
 public class YousuuPipeline implements Pipeline {
 
     @Autowired
