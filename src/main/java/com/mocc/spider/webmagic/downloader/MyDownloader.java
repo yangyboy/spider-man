@@ -18,7 +18,7 @@ public class MyDownloader extends HttpClientDownloader {
 //    @Autowired
 //    private RedisTemplate<String,Object> redisTemplate;
 //    private String keyPrefix;
-    private static final String FAIL_KEY = "fail";
+//    private static final String FAIL_KEY = "fail";
 
 //    public MyDownloader(String keyPrefix) {
 //        this.keyPrefix = keyPrefix;

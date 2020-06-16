@@ -28,7 +28,7 @@ public class NovelService extends ServiceImpl<NovelMapper, Novel> {
 
         mySpider.thread(10);
 
-        int totalPage = 11014;
+        int totalPage = 2;
 
         // 添加起始url
         for(int i=1; i<=totalPage; i++) {

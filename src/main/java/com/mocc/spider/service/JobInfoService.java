@@ -6,6 +6,7 @@ import com.mocc.spider.mapper.JobInfoMapper;
 import com.mocc.spider.entity.JobInfo;
 import com.mocc.spider.webmagic.processor.JobProcessor;
 import com.mocc.spider.webmagic.pipeline.JobInfoPipeline;
+import com.mocc.spider.webmagic.spider.MySpider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,7 @@ public class JobInfoService extends ServiceImpl<JobInfoMapper, JobInfo> {
         log.info("开始爬取数据");
 
         //设置爬虫配置
-        Spider.create(jobProcessor)
+        MySpider.create(jobProcessor)
                 .addUrl(url) //设置初始爬取的url
                 //使用布隆过滤器过滤重复url,需要引入guava包
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
